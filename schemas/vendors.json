@@ -1,0 +1,47 @@
+db.createCollection("v002_vendors", {
+    validator: {
+        "$jsonSchema": {
+            bsonType: 'object',
+            required: ['name','email','contact_number1','password', 'address1', 'location_type', 'city', 'state','office_type'],
+            properties: {
+                name: {
+                    bsonType: 'string',
+                    description: 'Name must is required'
+                },
+                email: {
+                    bsonType: 'string',
+                    pattern: '^.+@.+$',
+                    description: 'Email should be required'
+                },
+                contact_number1: {
+                    bsonType: 'string',
+                    description: 'Contact number must be required'
+                },
+                password: {
+                    bsonType: 'string',
+                    description: 'Password must be required'
+                },
+                address1: {
+                    bsonType: 'string',
+                    description: 'Address must be required'
+                },
+                location_type: {
+                    bsonType: 'string',
+                    description: 'Location type number must be required'
+                },
+                city: {
+                    bsonType: 'string',
+                    description: 'City must be required'
+                },
+                state: {
+                    bsonType: 'string',
+                    description: 'State number must is required'
+                },
+                'office_type':{
+                    bsonType: 'string',
+                    description: 'Office type must be required must is required'
+                }
+            }
+        }
+    }
+})
