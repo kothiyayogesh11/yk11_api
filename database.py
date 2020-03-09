@@ -16,8 +16,8 @@ class DB(object):
             
     @staticmethod
     def init(app):
-        client = pymongo.MongoClient(app.config["MONGO_URI"])
-        DB.DATABASE = client[app.config["DB_NAME"]]
+        """ client = pymongo.MongoClient(app.config["MONGO_URI"])
+        DB.DATABASE = client[app.config["DB_NAME"]] """
 
     @staticmethod
     def insert(collection, data):

@@ -8,7 +8,7 @@ from apis.utils.common import *
 from werkzeug.exceptions import HTTPException
 from werkzeug.exceptions import default_exceptions
 from flask_cors import CORS
-import logging
+import logging 
 
 def create_app(object):
     app = Flask(__name__)
