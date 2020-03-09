@@ -1,10 +1,10 @@
 import os
 from flask_script import Server, Manager
-from apis import bp_api_v1
+# from apis import bp_api_v1
 from app import create_app
 
 app = create_app(object)
-app.register_blueprint(bp_api_v1,url_prefix='/api/v1')
+# app.register_blueprint(bp_api_v1,url_prefix='/api/v1')
 
 app.app_context().push()
 
